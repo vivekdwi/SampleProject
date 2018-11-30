@@ -14,6 +14,7 @@ node {
                 }
                 
                 stage('Build Image'){
+                    sh 'docker rm -f sample_project' 
                     sh 'docker build -t sample_project .'
                 }
                
