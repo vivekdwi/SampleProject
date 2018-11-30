@@ -18,7 +18,7 @@ node {
                 }
                
                 stage('Start Container'){
-                    //sh 'docker rm $(docker stop $(docker ps -a -q --filter name=merkava_trafficlogs))'
+                    
                     sh 'docker run --name sample_project -d -p 8083:8083 sample_project'
                 }
             }
