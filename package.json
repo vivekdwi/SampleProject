@@ -1,0 +1,16 @@
+{
+  "name": "sampleproject",
+  "version": "1.0.0",
+  "description": "Sample NodeJD Application",
+  "main": ".app/server.js",
+  "scripts": {
+    "start": "node ./app/server.js",
+    "test": "test"
+  },
+  "author": "Vivek",
+  "license": "ISC",
+  "homepage": "https://github.com/vivekdwi/SampleProject#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
