@@ -14,8 +14,10 @@ node {
                 
                 stage('Code Quality Check'){
                     withSonarQubeEnv {
+                        sh 'mvn clean package sonar:sonar'
                         sh 'sonar-scanner'
                     }
+                    waitForQualityGate false
                 }
                
                 stage('Build Image'){
