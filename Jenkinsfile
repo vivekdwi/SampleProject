@@ -12,6 +12,12 @@ node {
                     sh 'npm install'
                 }
                 
+                stage('Code Quality Check'){
+                    withSonarQubeEnv {
+                        sh 'sonar-scanner'
+                    }
+                }
+               
                 stage('Build Image'){
                     sh 'docker rm -f sample_project' 
                     sh 'docker build -t sample_project .'
